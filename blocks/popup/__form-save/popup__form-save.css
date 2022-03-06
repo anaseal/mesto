@@ -1,0 +1,19 @@
+.popup__form-save {
+  padding: 0;
+  border: none;
+  margin: 45px 0 0 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  height: 46px;
+  border-radius: 2px;
+}
+@media screen and (min-width: 550px) {
+  .popup__form-save {
+    font-size: 18px;
+    height: 50px;
+  }
+}
