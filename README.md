@@ -18,4 +18,4 @@
 
 ## 
 
-## [<img src="https://user-images.githubusercontent.com/95904010/153245199-19ca6452-2a2e-4126-a987-05c813aa151e.png" height="32px" alt="логотип">ссылка на проект](https://anaseal.github.io/russian-travel/)
+## [<img src="https://user-images.githubusercontent.com/95904010/153245199-19ca6452-2a2e-4126-a987-05c813aa151e.png" height="32px" alt="логотип">ссылка на проект](https://anaseal.github.io/mesto/)
