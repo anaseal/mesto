@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="page/index.css" />
     <title>Mesto</title>
   </head>
-  <body class="page">
+  <body class="page index-page">
     <!-- шапка -->
     <header class="header">
       <img src="images/headerLogo.svg" alt="логотип" class="header__logo" />
@@ -15,17 +15,15 @@
     <main class="main">
       <!-- профиль -->
       <section class="profile">
-        <img src="images/Avatar.jpg" alt="" class="profile__avatar" />
+        <img src="images/Avatar.jpg" alt="аватар" class="profile__avatar" />
         <div class="profile__information">
           <div class="profile__name-box">
             <h1 class="profile__name overflow">Жак-Ив Кусто</h1>
-            <button class="profile__button-edit"></button>
+            <button type="button" class="profile__button-edit"></button>
           </div>
           <p class="profile__info overflow">Исследователь океана</p>
         </div>
-        <div class="profile__border">
-          <button class="profile__button-add"></button>
-        </div>
+        <button type="button" class="profile__button-add"></button>
       </section>
       <!-- галерея -->
       <section class="elements">
@@ -40,7 +38,7 @@
               <h2 class="gallery__title overflow">Карачаевск</h2>
               <button
                 type="button"
-                class="gallery__button gallery__button-action"
+                class="gallery__button"
                 title="Нравится!"
               ></button>
             </div>
@@ -51,7 +49,7 @@
               <h2 class="gallery__title">Гора Эльбрус</h2>
               <button
                 type="button"
-                class="gallery__button gallery__button-action"
+                class="gallery__button"
                 name="like"
                 title="Нравится!"
               ></button>
@@ -63,7 +61,7 @@
               <h2 class="gallery__title">Домбай</h2>
               <button
                 type="button"
-                class="gallery__button gallery__button-action"
+                class="gallery__button"
                 name="like"
                 title="Нравится!"
               ></button>
@@ -75,7 +73,7 @@
               <h2 class="gallery__title">Гора Эльбрус</h2>
               <button
                 type="button"
-                class="gallery__button gallery__button-action"
+                class="gallery__button"
                 name="like"
                 title="Нравится!"
               ></button>
@@ -87,7 +85,7 @@
               <h2 class="gallery__title">Домбай</h2>
               <button
                 type="button"
-                class="gallery__button gallery__button-action"
+                class="gallery__button"
                 name="like"
                 title="Нравится!"
               ></button>
@@ -103,49 +101,46 @@
               <h2 class="gallery__title">Карачаевск</h2>
               <button
                 type="button"
-                class="gallery__button gallery__button-action"
+                class="gallery__button"
                 title="Нравится!"
               ></button>
             </div>
           </li>
         </ul>
       </section>
-      <!-- popup -->
-      <section class="popup">
-        <div class="popup__container">
-          <button
-            class="popup__close-button"
-            type="button"
-            aria-label="закрыть окно"
-          ></button>
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <form name="userData" class="popup__profile">
-            <fieldset class="popup__form-box">
-              <input
-                type="text"
-                class="popup__form popup__form-name"
-                name="userName"
-                value="Жак-Ив Кусто"
-              />
-              <input
-                type="text"
-                class="popup__form popup__form-profession"
-                name="userProfession"
-                value="Исследователь океана"
-              />
-              <button type="submit" class="popup__form-save" value="Сохранить">
-                Сохранить
-              </button>
-            </fieldset>
-          </form>
-        </div>
-      </section>
     </main>
-    
     <!-- футер -->
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-    <script src="/script/script.js"></script>
+    <!-- popup -->
+    <div class="popup">
+      <div class="popup__container">
+        <button
+          type="button"
+          class="popup__close-button"
+          aria-label="закрыть окно"
+        ></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form name="userData" class="popup__profile">
+          <input
+            type="text"
+            class="popup__form popup__form-name_type_name"
+            name="userName"
+            value="Жак-Ив Кусто"
+          />
+          <input
+            type="text"
+            class="popup__form popup__form-profession_type_job"
+            name="userProfession"
+            value="Исследователь океана"
+          />
+          <button type="submit" class="popup__form-save" value="Сохранить">
+            Сохранить
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="/script/index.js"></script>
   </body>
 </html>

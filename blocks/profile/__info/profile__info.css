@@ -1,15 +1,18 @@
 .profile__info {
   font-style: normal;
+  text-align: center;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.2;
-  margin: 14px 19px 0;
-  max-width: 100%;
+  margin: 11px 0 0 0;
+  max-width: 282px;
 }
 @media screen and (min-width: 768px) {
   .profile__info {
+    text-align: start;
     font-size: 18px;
     line-height: 22px;
-    margin: 16px 0 0;
+    margin: 7px 0 0 30px;
+    max-width: 336px;
   }
 }
