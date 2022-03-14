@@ -5,15 +5,8 @@
   width: 100%;
   height: 50px;
   border: 0;
-<<<<<<< HEAD
-  /* background-image: url("images/addButton.svg"); */
-  background-image: url("../../../images/addButton.svg");
+  background-image: url("/images/addButton.svg");
   background-size: 16px;
-=======
-  background-image: url("../../../images/addButton.svg");
-  height: 16px;
-  width: 16px;
->>>>>>> main
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000;
@@ -27,7 +20,7 @@
 
 @media screen and (min-width: 768px) {
   .profile__button-add {
-    background-image: url("../../../images/addButtonBig.svg");
+    background-image: url("/images/addButtonBig.svg");
     background-size: 22px;
     width: 150px;
     height: 50px;

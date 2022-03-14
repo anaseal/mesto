@@ -3,11 +3,7 @@
   width: 18px;
   height: 18px;
   border: 1px solid white;
-<<<<<<< HEAD
   background-image: url("/images/buttonedit.svg");
-=======
-  background-image: url("../../../images/buttonedit.svg");
->>>>>>> main
   outline: none;
   cursor: pointer;
   background-position: center;
