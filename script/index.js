@@ -3,9 +3,9 @@ const popup = document.querySelector(".popup"); //сам поп ап
 const openPopupButton = document.querySelector(".profile__button-edit"); // открыть поп ап
 const closePopupButton = document.querySelector(".popup__close-button"); //скрыть поп ап
 let userName = document.querySelector(".profile__name"); // имя в профиле
-let nameInput = document.querySelector(".popup__form-name_type_name"); // имя в форме
+let nameInput = document.querySelector(".popup__form_type_name"); // имя в форме
 let userProfession = document.querySelector(".profile__info"); // работа в профиле
-let jobInput = document.querySelector(".popup__form-profession_type_job"); // работа в форме
+let jobInput = document.querySelector(".popup__form_type_job"); // работа в форме
 const formElement = document.querySelector(".popup__profile");
 
 // открытие поп апа
