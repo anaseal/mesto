@@ -6,7 +6,6 @@
   grid-template-columns: 282px;
   grid-column-gap: 17px;
   grid-row-gap: 20px;
-  margin: 0;
 }
 @media screen and (min-width: 600px) {
   .gallery {
