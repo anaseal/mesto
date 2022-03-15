@@ -10,6 +10,7 @@
   text-align: center;
   height: 46px;
   border-radius: 2px;
+  cursor: pointer;
 }
 @media screen and (min-width: 550px) {
   .popup__form-save {
@@ -17,4 +18,8 @@
     height: 50px;
     margin-top: 50px;
   }
+}
+.popup__form-save:hover {
+  opacity: 0.6;
+  transition: ease 1s;
 }

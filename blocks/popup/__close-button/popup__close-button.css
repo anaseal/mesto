@@ -22,3 +22,7 @@
     background-size: 32px;
   }
 }
+.popup__close-button:hover {
+  opacity: 0.6;
+  transition: ease 1s;
+}
