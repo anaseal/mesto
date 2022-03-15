@@ -1,6 +1,6 @@
 .gallery__button {
   padding: 0;
-  background-image: url(/images/like.svg);
+  background-image: url(../../../images/like.svg);
   background-color: #fff;
   border: none;
   cursor: pointer;

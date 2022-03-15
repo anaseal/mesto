@@ -5,5 +5,5 @@
   display: flex;
   flex-direction: column;
   width: 282px;
-  height: 361px;
+  min-height: 361px;
 }

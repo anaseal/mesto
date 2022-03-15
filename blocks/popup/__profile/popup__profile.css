@@ -1,9 +1,9 @@
 .popup__profile {
   padding: 0;
-  margin: 75px 0 0 0;
+  margin: 70px 0 0 0;
 }
 @media screen and (min-width: 550px) {
   .popup__profile {
-    margin: 54px 0 0 0;
+    margin-top: 45px;
   }
 }

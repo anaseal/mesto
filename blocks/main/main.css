@@ -3,11 +3,13 @@
 }
 @media screen and (min-width: 460px) {
   .main {
-    padding: 0 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 @media screen and (min-width: 1280px) {
   .main {
-    padding: 0 200px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }

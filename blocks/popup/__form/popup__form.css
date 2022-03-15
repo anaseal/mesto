@@ -9,3 +9,6 @@
   vertical-align: top;
   width: 100%;
 }
+.popup__form:first-child {
+  margin-bottom: 30px;
+}
