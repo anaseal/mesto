@@ -2,6 +2,7 @@
   padding: 0;
   width: 18px;
   height: 18px;
+  background-size: 7.5px;
   border: 1px solid white;
   background-image: url("../../../images/buttonedit.svg");
   outline: none;
@@ -16,7 +17,7 @@
 }
 @media screen and (min-width: 768px) {
   .profile__button-edit {
-    background-size: 7.5px;
+    background-size: 10px;
     width: 24px;
     height: 24px;
   }
