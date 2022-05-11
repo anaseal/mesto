@@ -26,95 +26,14 @@
         <button type="button" class="profile__button-add"></button>
       </section>
       <!-- галерея -->
-      <section class="elements">
-        <ul class="gallery">
-          <li class="gallery__item">
-            <img
-              src="images/photo6.jpg"
-              alt="Карачаевск"
-              class="gallery__photo"
-            />
-            <div class="gallery__info">
-              <h2 class="gallery__title overflow">Карачаевск</h2>
-              <button
-                type="button"
-                class="gallery__button"
-                title="Нравится!"
-              ></button>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <img src="images/photo4.jpg" alt="Эльбрус" class="gallery__photo" />
-            <div class="gallery__info">
-              <h2 class="gallery__title">Гора Эльбрус</h2>
-              <button
-                type="button"
-                class="gallery__button"
-                name="like"
-                title="Нравится!"
-              ></button>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <img src="images/photo5.jpg" alt="Домбай" class="gallery__photo" />
-            <div class="gallery__info">
-              <h2 class="gallery__title">Домбай</h2>
-              <button
-                type="button"
-                class="gallery__button"
-                name="like"
-                title="Нравится!"
-              ></button>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <img src="images/photo4.jpg" alt="Эльбрус" class="gallery__photo" />
-            <div class="gallery__info">
-              <h2 class="gallery__title">Гора Эльбрус</h2>
-              <button
-                type="button"
-                class="gallery__button"
-                name="like"
-                title="Нравится!"
-              ></button>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <img src="images/photo5.jpg" alt="Домбай" class="gallery__photo" />
-            <div class="gallery__info">
-              <h2 class="gallery__title">Домбай</h2>
-              <button
-                type="button"
-                class="gallery__button"
-                name="like"
-                title="Нравится!"
-              ></button>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <img
-              src="images/photo6.jpg"
-              alt="Карачаевск"
-              class="gallery__photo"
-            />
-            <div class="gallery__info">
-              <h2 class="gallery__title">Карачаевск</h2>
-              <button
-                type="button"
-                class="gallery__button"
-                title="Нравится!"
-              ></button>
-            </div>
-          </li>
-        </ul>
-      </section>
+      <section class="elements"></section>
     </main>
     <!-- футер -->
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
     <!-- popup -->
-    <div class="popup">
+    <div class="popup popup_edit-profile">
       <div class="popup__container">
         <button
           type="button"
@@ -141,5 +60,67 @@
         </form>
       </div>
     </div>
-    <script src="script/script.js"></script> </body>
+    <!-- попап добавление -->
+<div class="popup popup_addPhoto">
+  <div class="popup__container">
+        <button
+          type="button"
+          class="popup__close-button popup__close-button-add"
+          aria-label="закрыть окно"
+        ></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form name="userData" class="popup__profile popup__add-form"> action="#"
+          <input
+            type="text"
+            class="popup__form popup__form_type_title"
+            name="FormTitle"
+            value="Название"
+          />
+          <input
+            type="text"
+            class="popup__form popup__form_type_link"
+            name="formLink"
+            value="Ссылка на картинку"
+          />
+          <button type="submit" class="popup__form-save" value="Сохранить">
+            Создать
+          </button>
+        </form>
+      </div>
+      </div>
+      <!-- зум -->
+    <div class="popup popup__zoom">
+      <div class="popup__zoom-container">
+        <button
+          type="button"
+          class="popup__zoom_close-button popup__close-button"
+          aria-label="закрыть окно"
+        ></button>
+        <img src="" alt="" class="popup__zoom_image" />
+        <p class="popup__zoom_title"></p>
+      </div>
+    </div>
+<!-- темплейт -->
+    <template id="gallery-template">
+      <div class="gallery">
+        <article class="gallery__item">
+          <img src="" alt="" class="gallery__photo" />
+          <button
+            type="button"
+            class="gallery__delete"
+            title="Удалить"
+          ></button>
+          <div class="gallery__info">
+            <h2 class="gallery__title overflow"></h2>
+            <button
+              type="button"
+              class="gallery__like"
+              title="Нравится!"
+            ></button>
+          </div>
+        </article>
+      </div>
+    </template>
+    <script src="script/script.js"></script>
+  </body>
 </html>

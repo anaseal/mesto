@@ -1,6 +1,6 @@
-.gallery__button {
+.gallery__like_active {
   padding: 0;
-  background-image: url(../../../images/like.svg);
+  background-image: url(../../../../images/likeButtonActive.svg);
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -9,8 +9,4 @@
   width: 22px;
   height: 19px;
   margin: 30px 20px;
-}
-.gallery__button:hover {
-  opacity: 0.6;
-  transition: ease 1s;
 }
