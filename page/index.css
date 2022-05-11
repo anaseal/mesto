@@ -40,17 +40,15 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__profile/popup__profile.css);
 @import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/__zoom/_container/popup__zoom-container.css);
+@import url(../blocks/popup/__container/__container-zoom/popup__zoom-container.css);
 @import url(../blocks/popup/__add-form/popup__add-form.css);
 @import url(../blocks/popup/__form/_type/popup__form_type_link.css);
 @import url(../blocks/popup/__form/_type/popup__form_type_title.css);
-@import url(../blocks/);
 
-@import url(../blocks/popup/__zoom/popup__zoom.css);
-@import url(../blocks/popup/__zoom/_image/popup__zoom_image.css);
-@import url(../blocks/popup/__zoom/_title/popup__zoom_title.css);
-@import url(../blocks/popup/__zoom/_close-button/popup__zoom_close-button.css);
-@import url(../);
+@import url(../blocks/popup/_zoom/popup_zoom.css);
+@import url(../blocks/popup/__image-zoom/popup__image-zoom.css);
+@import url(../blocks/popup/__title/__title-zoom/popup__title-zoom.css);
+@import url(../blocks/popup/__close-button/__close-button-zoom/popup__close-button-zoom.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);

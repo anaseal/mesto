@@ -5,9 +5,9 @@ const formElement = document.querySelector(".popup__profile");
 //Кнопки
 const editButton = document.querySelector(".profile__button-edit"); //редактирование профиля
 const closeButton = document.querySelector(".popup__close-button"); //закрытие профиля
-const zoomImage = document.querySelector(".popup__zoom_image"); //картинка
+const zoomImage = document.querySelector(".popup__image-zoom"); //картинка
 const addButton = document.querySelector(".profile__button-add"); // добавить картинку
-const closeZoom = document.querySelector(".popup__zoom_close-button"); //закрыть картинку
+const closeZoom = document.querySelector(".popup__close-button-zoom"); //закрыть картинку
 const addClose = document.querySelector(".popup__close-button-add"); //закрыть добавление
 
 //имя
@@ -19,8 +19,8 @@ const jobInput = document.querySelector(".popup__form_type_job");
 const profileJob = document.querySelector(".profile__info");
 
 //зум
-const zoomTitle = document.querySelector(".popup__zoom_title");
-const popupZoom = document.querySelector(".popup__zoom");
+const zoomTitle = document.querySelector(".popup__title-zoom");
+const popupZoom = document.querySelector(".popup_zoom");
 
 //форма добавление картинки
 const popupAdd = document.querySelector(".popup_addPhoto");
