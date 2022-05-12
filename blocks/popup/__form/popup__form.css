@@ -8,6 +8,8 @@
   min-height: 27px;
   vertical-align: top;
   width: 100%;
+  outline: none;
+  color: #c4c4c4;
 }
 .popup__form:first-child {
   margin-bottom: 30px;
