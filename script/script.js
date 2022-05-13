@@ -26,7 +26,6 @@ const initialCards = [
 ];
 const elementsCard = document.querySelector(".elements");
 
-const popup = document.querySelector(".popup");
 const popupProfile = document.querySelector(".popup_edit-profile");
 const formPopupProfile = popupProfile.querySelector(".popup__profile");
 
@@ -83,7 +82,7 @@ function submitProfileForm(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
-  closePopup(popup);
+  closePopup(popupProfile);
 }
 formPopupProfile.addEventListener("submit", submitProfileForm);
 
