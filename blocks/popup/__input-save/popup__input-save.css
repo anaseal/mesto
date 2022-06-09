@@ -1,7 +1,7 @@
-.popup__form-save {
+.popup__input-save {
   padding: 0;
   border: none;
-  margin: 50px 0 0 0;
+  margin: 10px 0 0 0;
   width: 100%;
   background-color: #000;
   color: #fff;
@@ -13,13 +13,13 @@
   cursor: pointer;
 }
 @media screen and (min-width: 550px) {
-  .popup__form-save {
+  .popup__input-save {
     font-size: 18px;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 }
-.popup__form-save:hover {
+.popup__input-save:hover {
   opacity: 0.6;
   transition: ease 1s;
 }
