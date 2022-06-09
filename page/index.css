@@ -3,6 +3,7 @@
 @import url(../fonts/fonts.css);
 
 @import url(../blocks/page/page.css);
+@import url(../blocks/main/main.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
@@ -33,24 +34,46 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__container/popup__container.css);
-@import url(../blocks/popup/__form/_type/popup__form_type_job.css);
-@import url(../blocks/popup/__form/_type/popup__form_type_name.css);
-@import url(../blocks/popup/__form-save/popup__form-save.css);
-@import url(../blocks/popup/__form/popup__form.css);
+
+@import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__profile/popup__profile.css);
 @import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/__container/__container-zoom/popup__container-zoom.css);
+
 @import url(../blocks/popup/__add-form/popup__add-form.css);
-@import url(../blocks/popup/__form/_type/popup__form_type_link.css);
-@import url(../blocks/popup/__form/_type/popup__form_type_title.css);
+
+@import url(../blocks/popup/__input/_type/popup__input_type_job.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_name.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_link.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_title.css);
 
 @import url(../blocks/popup/_zoom/popup_zoom.css);
 @import url(../blocks/popup/__image-zoom/popup__image-zoom.css);
 @import url(../blocks/popup/__title/__title-zoom/popup__title-zoom.css);
+@import url(../blocks/popup/__container/__container-zoom/popup__container-zoom.css);
+
 @import url(../blocks/popup/__close-button/__close-button-zoom/popup__close-button-zoom.css);
 @import url(../blocks/popup/__close-button/__close-button-profile/popup__close-button-profile.css);
 @import url(../blocks/popup/__close-button/popup__close-button-add/popup__close-button-add.css);
+
+
+@import url(../blocks/popup/__input-error/__input-error_active/popup__input-error_active.css);
+@import url(../blocks/popup/__input-error/popup__input-error.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_error.css);
+
+@import url(../blocks/popup/__input-save/popup__input-save.css);
+@import url(../blocks/popup/__input-save/_inactive/popup__input-save_inactive.css);
+
+@import url(../blocks/popup/__fieldset/popup__fieldset.css);
+
+@import url(../blocks/popup/__form/popup__form.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
-@import url(../blocks/main/main.css);
+
+
+@import url(../blocks/inputCardLink-error/inputCardLink-error.css);
+@import url(../blocks/inputCardTitle-error/inputCardTitle-error.css);
+@import url(../blocks/inputProfileJob-error/inputProfileJob-error.css);
+@import url(../blocks/inputProfileName-Error/inputProfileName-Error.css);
+
