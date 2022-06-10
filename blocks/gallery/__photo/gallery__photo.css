@@ -5,6 +5,7 @@
   background-color: black;
 }
 .gallery__photo:hover {
+  cursor: pointer;
   opacity: 0.7;
   transition: ease 1s;
 }

@@ -11,6 +11,9 @@ const addButton = document.querySelector(".profile__button-add"); // добав�
 const closeZoom = document.querySelector(".popup__close-button-zoom"); //закрыть картинку
 const closeAdd = document.querySelector(".popup__close-button-add"); //закрыть добавление
 const savePopup = document.querySelector(".popup__input-save");
+
+const addPopup = document.querySelector(".popup_addPhoto");
+const savePopupAdd = addPopup.querySelector(".popup__input-save");
 //имя
 const nameInput = document.querySelector(".popup__input_type_name");
 const profileName = document.querySelector(".profile__name");
@@ -48,7 +51,7 @@ editButton.addEventListener("click", profileOpen);
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
   document.removeEventListener("keydown", closePopupByEsc);
-  document.addEventListener("click", closePopupByOverlay);
+  document.removeEventListener("click", closePopupByOverlay);
 }
 // нажатие на esc
 const closePopupByEsc = (evt) => {
@@ -112,10 +115,16 @@ closeZoom.addEventListener("click", () => {
   closePopup(popupZoom);
 });
 
+//неактивная кнопочка
+const disabledSaveBtn = (savePopup) => {
+  savePopup.classList.add("popup__input-save_inactive");
+  savePopup.setAttribute("disabled", true);
+};
+
 // добавить карточку
 function addCard(evt) {
   evt.preventDefault();
-
+  disabledSaveBtn(savePopupAdd);
   const cardElement = createCard({
     name: addTitle.value,
     link: addLink.value,
