@@ -80,8 +80,7 @@ const setEventListeners = (formElement, validConfig) => {
 /*Отключение кнопки, если есть невалидное поле*/
 const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(`${inactiveButtonClass}`);
-    buttonElement.disabled = true;
+    disabledSaveBtn(savePopupAdd);
   } else {
     buttonElement.classList.remove(`${inactiveButtonClass}`);
     buttonElement.disabled = false;
