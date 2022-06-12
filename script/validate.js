@@ -67,7 +67,6 @@ const setEventListeners = (formElement, validConfig) => {
     formElement.querySelectorAll(`.${inputSelector}`)
   );
   const buttonElement = formElement.querySelector(`.${submitButtonSelector}`);
-
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", () => {
       isValid(formElement, inputElement, inputErrorClass, errorClass);
@@ -76,14 +75,23 @@ const setEventListeners = (formElement, validConfig) => {
   });
   toggleButtonState(inputList, buttonElement, inactiveButtonClass);
 };
+//неактивная кнопочка
+const disabledSaveBtn = (buttonElement) => {
+  buttonElement.classList.add(selectors.inactiveButtonClass);
+  buttonElement.setAttribute("disabled", true);
+};
+// активная кнопочка
+const enableSaveBtn = (buttonElement) => {
+  buttonElement.classList.remove(selectors.inactiveButtonClass);
+  buttonElement.disabled = false;
+};
 
 /*Отключение кнопки, если есть невалидное поле*/
-const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
+const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
-    disabledSaveBtn(savePopupAdd);
+    disabledSaveBtn(buttonElement);
   } else {
-    buttonElement.classList.remove(`${inactiveButtonClass}`);
-    buttonElement.disabled = false;
+    enableSaveBtn(buttonElement);
   }
 };
 

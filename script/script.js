@@ -115,12 +115,6 @@ closeZoom.addEventListener("click", () => {
   closePopup(popupZoom);
 });
 
-//неактивная кнопочка
-const disabledSaveBtn = (savePopup) => {
-  savePopup.classList.add("popup__input-save_inactive");
-  savePopup.setAttribute("disabled", true);
-};
-
 // добавить карточку
 function addCard(evt) {
   evt.preventDefault();
