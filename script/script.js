@@ -118,7 +118,7 @@ closeZoom.addEventListener("click", () => {
 // добавить карточку
 function addCard(evt) {
   evt.preventDefault();
-  disabledSaveBtn(savePopupAdd);
+  disabledSaveBtn(savePopupAdd, selectors.inactiveButtonClass);
   const cardElement = createCard({
     name: addTitle.value,
     link: addLink.value,

@@ -76,22 +76,22 @@ const setEventListeners = (formElement, validConfig) => {
   toggleButtonState(inputList, buttonElement, inactiveButtonClass);
 };
 //неактивная кнопочка
-const disabledSaveBtn = (buttonElement) => {
-  buttonElement.classList.add(selectors.inactiveButtonClass);
+const disabledSaveBtn = (buttonElement, inactiveButtonClass) => {
+  buttonElement.classList.add(inactiveButtonClass);
   buttonElement.setAttribute("disabled", true);
 };
 // активная кнопочка
-const enableSaveBtn = (buttonElement) => {
-  buttonElement.classList.remove(selectors.inactiveButtonClass);
+const enableSaveBtn = (buttonElement, inactiveButtonClass) => {
+  buttonElement.classList.remove(inactiveButtonClass);
   buttonElement.disabled = false;
 };
 
 /*Отключение кнопки, если есть невалидное поле*/
-const toggleButtonState = (inputList, buttonElement) => {
+const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
   if (hasInvalidInput(inputList)) {
-    disabledSaveBtn(buttonElement);
+    disabledSaveBtn(buttonElement, inactiveButtonClass);
   } else {
-    enableSaveBtn(buttonElement);
+    enableSaveBtn(buttonElement, inactiveButtonClass);
   }
 };
 
