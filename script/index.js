@@ -1,3 +1,8 @@
+import { initialCards } from "./constans.js";
+import { selectors } from "./constans.js";
+import FormValidator from "./FormValidator.js";
+import Card from "./card.js";
+
 const elementsCard = document.querySelector(".elements");
 
 const popupProfile = document.querySelector(".popup_edit-profile");
@@ -6,9 +11,9 @@ const formPopupProfile = popupProfile.querySelector(".popup__profile");
 //Кнопки
 const editButton = document.querySelector(".profile__button-edit"); //редактирование профиля
 const closeProfile = document.querySelector(".popup__close-button-profile"); //закрытие профиля
-const zoomImage = document.querySelector(".popup__image-zoom"); //картинка
+export const zoomImage = document.querySelector(".popup__image-zoom"); //картинка
 const addButton = document.querySelector(".profile__button-add"); // добавить картинку
-const closeZoom = document.querySelector(".popup__close-button-zoom"); //закрыть картинку
+export const closeZoom = document.querySelector(".popup__close-button-zoom"); //закрыть картинку
 const closeAdd = document.querySelector(".popup__close-button-add"); //закрыть добавление
 const savePopup = document.querySelector(".popup__input-save");
 
@@ -23,8 +28,8 @@ const jobInput = document.querySelector(".popup__input_type_job");
 const profileJob = document.querySelector(".profile__info");
 
 //зум
-const zoomTitle = document.querySelector(".popup__title-zoom");
-const popupZoom = document.querySelector(".popup_zoom");
+export const zoomTitle = document.querySelector(".popup__title-zoom");
+export const popupZoom = document.querySelector(".popup_zoom");
 
 //форма добавление картинки
 const popupAdd = document.querySelector(".popup_addPhoto");
@@ -32,8 +37,17 @@ const addTitle = document.querySelector(".popup__input_type_title");
 const addLink = document.querySelector(".popup__input_type_link");
 const addForm = document.querySelector(".popup__add-form");
 
+//создать объект
+const formValidator = {}; 
+
+Array.from(document.forms).forEach((formElement) => {
+  formValidator[formElement.name] = new FormValidator(selectors, formElement);
+  formValidator[formElement.name].enableValidation();
+});
+
 //открытие общее
-function openPopup(popup) {
+
+export function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener("keydown", closePopupByEsc);
   document.addEventListener("click", closePopupByOverlay);
@@ -48,7 +62,7 @@ function profileOpen() {
 editButton.addEventListener("click", profileOpen);
 
 //закрытие общее
-function closePopup(popup) {
+export function closePopup(popup) {
   popup.classList.remove("popup_opened");
   document.removeEventListener("keydown", closePopupByEsc);
   document.removeEventListener("click", closePopupByOverlay);
@@ -81,35 +95,10 @@ function submitProfileForm(evt) {
 formPopupProfile.addEventListener("submit", submitProfileForm);
 
 // добавление карточек
-const cardTemplate = document.querySelector("#gallery-template").content; //темплейт
-function createCard(card) {
-  const cloneCard = cardTemplate.cloneNode(true);
-  cloneCard.querySelector(".gallery__title").textContent = card.name;
-  const imageCard = cloneCard.querySelector(".gallery__photo");
-  imageCard.src = card.link;
-  imageCard.alt = card.name;
-
-  // Лайк
-  cloneCard.querySelector(".gallery__like").addEventListener("click", (evt) => {
-    evt.target.classList.toggle("gallery__like_active");
-  });
-
-  // удаление
-  const deleteButton = cloneCard.querySelector(".gallery__delete");
-  const gallery = cloneCard.querySelector(".gallery");
-  deleteButton.addEventListener("click", function (evt) {
-    gallery.remove();
-  });
-
-  imageCard.addEventListener("click", () => {
-    zoomImage.src = card.link;
-    zoomTitle.textContent = card.name;
-    zoomImage.alt = card.name;
-    openPopup(popupZoom);
-  });
-
-  return cloneCard;
-}
+const createCard = (item) => {
+  const card = new Card(item, "#gallery-template");
+  return card;
+};
 // закрыть зум
 closeZoom.addEventListener("click", () => {
   closePopup(popupZoom);
@@ -140,7 +129,9 @@ closeAdd.addEventListener("click", function () {
 });
 
 // массив
-initialCards.forEach((element) => {
-  const cardElement = createCard(element);
+initialCards.forEach((item) => {
+  const card = createCard(item);
+  const cardElement = card.makeCard();
+
   elementsCard.append(cardElement);
 });

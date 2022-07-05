@@ -1,4 +1,4 @@
-const initialCards = [
+export const initialCards = [
   {
     name: "уточка",
     link: "https://images.unsplash.com/photo-1578102487209-9229fa2b1cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
@@ -24,3 +24,12 @@ const initialCards = [
     link: "https://images.unsplash.com/photo-1557704086-3e2f5969687b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
   },
 ];
+
+export const selectors = {
+  formSelector: "popup__form",
+  inputSelector: "popup__input",
+  submitButtonSelector: "popup__input-save",
+  inactiveButtonClass: "popup__input-save_inactive",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__input-error_active",
+};
