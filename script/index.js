@@ -38,7 +38,7 @@ const addLink = document.querySelector(".popup__input_type_link");
 const addForm = document.querySelector(".popup__add-form");
 
 //создать объект
-const formValidator = {}; 
+const formValidator = {};
 
 Array.from(document.forms).forEach((formElement) => {
   formValidator[formElement.name] = new FormValidator(selectors, formElement);
@@ -104,7 +104,6 @@ closeZoom.addEventListener("click", () => {
   closePopup(popupZoom);
 });
 
-
 const addCard = (evt) => {
   evt.preventDefault();
   const newCard = {
@@ -113,7 +112,7 @@ const addCard = (evt) => {
   };
   closePopup(addPopup);
   const card = createCard(newCard);
-  const cardElement = card. makeCard();
+  const cardElement = card.makeCard();
 
   elementsCard.prepend(cardElement);
 };
