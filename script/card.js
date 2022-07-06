@@ -18,21 +18,21 @@ export default class Card {
 
   /* подготовка карточки к публикации */
   makeCard() {
-    this._gallery = this._getTemplate();
+    this._card = this._getTemplate();
 
-    this._image = this._gallery.querySelector(".gallery__photo");
+    this._image = this._card.querySelector(".gallery__photo");
     this._image.src = this._link;
     this._image.alt = this._name;
-    this._gallery.querySelector(".gallery__title").textContent = this._name;
-    this.__likeButton = this._gallery.querySelector(".gallery__like");
-    this._deleteButton = this._gallery.querySelector(".gallery__delete");
+    this._card.querySelector(".gallery__title").textContent = this._name;
+    this.__likeButton = this._card.querySelector(".gallery__like");
+    this._deleteButton = this._card.querySelector(".gallery__delete");
 
     this._setEventListeners();
 
-    return this._gallery;
+    return this._card;
   }
 
-  _OpenPopup() {
+  _openPopup() {
     zoomImage.src = this._link;
     zoomTitle.textContent = this._name;
     zoomImage.alt = this._name;

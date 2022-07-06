@@ -1,7 +1,7 @@
-import { initialCards } from "./constans.js";
-import { selectors } from "./constans.js";
+import { initialCards } from "./utils/constants.js";
+import { selectors } from "./utils/constants.js";
 import FormValidator from "./FormValidator.js";
-import Card from "./card.js";
+import Card from "./Card.js";
 
 const elementsCard = document.querySelector(".elements");
 
@@ -50,7 +50,7 @@ Array.from(document.forms).forEach((formElement) => {
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener("keydown", closePopupByEsc);
-  document.addEventListener("click", closePopupByOverlay);
+  popup.addEventListener("click", closePopupByOverlay);
 }
 
 // редактирование профиля
@@ -59,8 +59,9 @@ function profileOpen() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
-editButton.addEventListener("click", profileOpen);
-
+editButton.addEventListener("click", function () {
+  profileOpen();
+});
 //закрытие общее
 export function closePopup(popup) {
   popup.classList.remove("popup_opened");
@@ -83,6 +84,7 @@ function closePopupByOverlay(evt) {
 // закрытие профиля
 closeProfile.addEventListener("click", function () {
   closePopup(popupProfile);
+  formPopupProfile.reset();
 });
 
 // обработка профиля
@@ -115,6 +117,7 @@ const addCard = (evt) => {
   const cardElement = card.makeCard();
 
   elementsCard.prepend(cardElement);
+  addForm.reset();
 };
 
 addForm.addEventListener("submit", addCard);
