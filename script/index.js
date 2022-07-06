@@ -104,19 +104,20 @@ closeZoom.addEventListener("click", () => {
   closePopup(popupZoom);
 });
 
-// добавить карточку
-function addCard(evt) {
+
+const addCard = (evt) => {
   evt.preventDefault();
-  disabledSaveBtn(savePopupAdd, selectors.inactiveButtonClass);
-  const cardElement = createCard({
+  const newCard = {
     name: addTitle.value,
     link: addLink.value,
-  });
-  elementsCard.prepend(cardElement);
+  };
+  closePopup(addPopup);
+  const card = createCard(newCard);
+  const cardElement = card. makeCard();
 
-  closePopup(popupAdd);
-  addForm.reset();
-}
+  elementsCard.prepend(cardElement);
+};
+
 addForm.addEventListener("submit", addCard);
 
 //редактирование профиля
