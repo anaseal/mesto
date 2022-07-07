@@ -48,7 +48,7 @@ export default class Card {
   };
   _setEventListeners = () => {
     this._image.addEventListener("click", () => {
-      this._OpenPopup();
+      this._openPopup();
     });
 
     this.__likeButton.addEventListener("click", () => {
