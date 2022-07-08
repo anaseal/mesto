@@ -49,7 +49,7 @@ Array.from(document.forms).forEach((formElement) => {
 
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
-  document.addEventListener("keydown", closePopupByEsc);
+  popup.addEventListener("keydown", closePopupByEsc);
   popup.addEventListener("click", closePopupByOverlay);
 }
 
@@ -65,8 +65,8 @@ editButton.addEventListener("click", function () {
 //закрытие общее
 export function closePopup(popup) {
   popup.classList.remove("popup_opened");
-  document.removeEventListener("keydown", closePopupByEsc);
-  document.removeEventListener("click", closePopupByOverlay);
+  popup.removeEventListener("keydown", closePopupByEsc);
+  popup.removeEventListener("click", closePopupByOverlay);
 }
 // нажатие на esc
 const closePopupByEsc = (evt) => {
