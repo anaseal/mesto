@@ -15,10 +15,7 @@ export const zoomImage = document.querySelector(".popup__image-zoom"); //кар�
 const addButton = document.querySelector(".profile__button-add"); // добавить картинку
 export const closeZoom = document.querySelector(".popup__close-button-zoom"); //закрыть картинку
 const closeAdd = document.querySelector(".popup__close-button-add"); //закрыть добавление
-const savePopup = document.querySelector(".popup__input-save");
 
-const addPopup = document.querySelector(".popup_addPhoto");
-const savePopupAdd = addPopup.querySelector(".popup__input-save");
 //имя
 const nameInput = document.querySelector(".popup__input_type_name");
 const profileName = document.querySelector(".profile__name");
@@ -45,6 +42,12 @@ Array.from(document.forms).forEach((formElement) => {
   formValidator[formElement.name].enableValidation();
 });
 
+const formEdit = new FormValidator(selectors, formPopupProfile);
+formEdit.enableValidation();
+//валидация 2 формы
+const cardAdd = new FormValidator(selectors, popupAdd);
+cardAdd.enableValidation();
+
 //открытие общее
 
 export function openPopup(popup) {
@@ -58,6 +61,7 @@ function profileOpen() {
   openPopup(popupProfile);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
+  formEdit.cleanForm();
 }
 editButton.addEventListener("click", function () {
   profileOpen();
@@ -112,7 +116,7 @@ const addCard = (evt) => {
     name: addTitle.value,
     link: addLink.value,
   };
-  closePopup(addPopup);
+  closePopup(popupAdd);
   const card = createCard(newCard);
   const cardElement = card.makeCard();
 
@@ -125,6 +129,7 @@ addForm.addEventListener("submit", addCard);
 //редактирование профиля
 addButton.addEventListener("click", function () {
   openPopup(popupAdd);
+  cardAdd.cleanForm();
 });
 // закрыть форму добавления
 closeAdd.addEventListener("click", function () {
