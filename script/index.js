@@ -52,25 +52,25 @@ cardAdd.enableValidation();
 
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
-  popup.addEventListener("keydown", closePopupByEsc);
-  popup.addEventListener("click", closePopupByOverlay);
+  document.addEventListener("keydown", closePopupByEsc);
+  document.addEventListener("click", closePopupByOverlay);
 }
 
 // редактирование профиля
-function profileOpen() {
+function openProfile() {
   openPopup(popupProfile);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
   formEdit.cleanForm();
 }
 editButton.addEventListener("click", function () {
-  profileOpen();
+  openProfile();
 });
 //закрытие общее
 export function closePopup(popup) {
   popup.classList.remove("popup_opened");
-  popup.removeEventListener("keydown", closePopupByEsc);
-  popup.removeEventListener("click", closePopupByOverlay);
+  document.removeEventListener("keydown", closePopupByEsc);
+  document.removeEventListener("click", closePopupByOverlay);
 }
 // нажатие на esc
 const closePopupByEsc = (evt) => {

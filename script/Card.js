@@ -44,7 +44,7 @@ export default class Card {
   }
 
   _deleteCard = () => {
-    this._deleteButton.closest(".gallery").remove();
+    this._card.remove();
   };
   _setEventListeners = () => {
     this._image.addEventListener("click", () => {
